@@ -12,9 +12,7 @@ import dagger.hilt.android.components.ViewModelComponent
 class NetworkModule {
 
     @Provides
-    fun provideBaseRetrofit(): BaseRetrofit {
-        return BaseRetrofit()
-    }
+    fun provideBaseRetrofit() = BaseRetrofit()
 
     @Provides
     fun provideComicsService(retrofit: BaseRetrofit): ComicsService {
